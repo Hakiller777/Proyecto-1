@@ -1,0 +1,17 @@
+# Ignorar entornos virtuales
+desarrollo/
+produccion/
+
+# Archivos de Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Archivos de configuración
+*.env
+*.log
+
+# Archivos específicos del sistema
+.DS_Store
+.idea/
+.vscode/
