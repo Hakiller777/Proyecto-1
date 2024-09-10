@@ -23,11 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-np+eq8terl*7uk@$(x1ej3)$ma$5muhzzg1pgcw$=qh2v8&28h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+import os
 
-ALLOWED_HOSTS = ['*']
-
-
+if os.getenv('DJANGO_PRODUCTION') == 'true':
+	DEBUG = False
+	ALLOWED_HOSTS = ['localhost', '127.0.0.1', '::1']
+else:
+	DEBUG = True
+	ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -138,7 +141,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/hakiller/Escritorio/Proyecto-1/staticfiles'
+STATIC_ROOT = '/home/hakiller/Escritorio/Proyecto-1/frontend/static'
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = '/home/hakiller/Escritorio/Proyecto-1/media'
