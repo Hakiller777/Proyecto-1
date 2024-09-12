@@ -27,7 +27,7 @@ import os
 
 if os.getenv('DJANGO_PRODUCTION') == 'true':
 	DEBUG = False
-	ALLOWED_HOSTS = ['localhost', '127.0.0.1', '::1']
+	ALLOWED_HOSTS = ['localhost']
 else:
 	DEBUG = True
 	ALLOWED_HOSTS = []
@@ -140,7 +140,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'frontend/static')
 
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/home/hakiller/Escritorio/Proyecto-1/media'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'frontend/media')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
