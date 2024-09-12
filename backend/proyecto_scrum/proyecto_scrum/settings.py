@@ -26,11 +26,11 @@ SECRET_KEY = 'django-insecure-np+eq8terl*7uk@$(x1ej3)$ma$5muhzzg1pgcw$=qh2v8&28h
 import os
 
 if os.getenv('DJANGO_PRODUCTION') == 'true':
-	DEBUG = False
-	ALLOWED_HOSTS = ['localhost']
+    DEBUG = False
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 else:
-	DEBUG = True
-	ALLOWED_HOSTS = []
+    DEBUG = True
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 # Application definition
 
@@ -136,7 +136,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'frontend/static')
+if not DEBUG:  # Solo para producción
+    STATIC_ROOT = os.path.join(BASE_DIR, 'frontend/static')
+
+if DEBUG:  # Solo para desarrollo
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'frontend/static_dev'),
+    ]
 
 
 MEDIA_URL = '/media/'
