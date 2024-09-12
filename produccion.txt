@@ -1,0 +1,10 @@
+asgiref==3.8.1
+Django==4.2.5
+django-environ==0.10.0
+django-extensions==3.2.1
+gunicorn==23.0.0
+mod_wsgi==4.9.4
+packaging==24.1
+psycopg2==2.9.6
+sqlparse==0.5.1
+whitenoise==6.4.0
