@@ -1,8 +1,4 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
-def index(request):
-    return HttpResponse("Página de inicio de miapp")
-
-def home(request):
-    return HttpResponse("Bienvenido a la página principal de miapp")
-
+def bienvenida(request):
+    return render(request, 'miapp/bienvenida.html')
