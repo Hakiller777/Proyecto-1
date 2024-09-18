@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="{% static 'usuarios/style.css' %}">
+</head>
+<body>
+    <h1>Iniciar Sesión</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+    <script src="{% static 'usuarios/script.js' %}"></script> 
+</body>
+</html>
