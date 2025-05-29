@@ -36,9 +36,8 @@ A basic but functional user authentication system built using **Django**, integr
 ---
 ## 🔧 Setup Instructions
 
-```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+1. Clone the repository
+    https://github.com/Hakiller777/Proyecto-1.git
 
 2. Create a Virtual Environment
 
@@ -50,11 +49,11 @@ venv\Scripts\activate     # Windows
 
 For development:
 
-pip install -r requirements-dev.txt
+pip install -r desarrollo.txt
 
 For production:
 
-pip install -r requirements-prod.txt
+pip install -r produccion.txt
 
 4. Set Environment Variable
 
@@ -73,7 +72,7 @@ python manage.py runserver
 
 Visit http://127.0.0.1:8000 in your browser.
 
-📦 Deployment Notes
+6. Deployment Notes
 
 Production server can use Gunicorn or mod_wsgi with Apache.
 
@@ -81,7 +80,7 @@ You may use systemctl for services like pgAdmin.
 
 Configure static files with whitenoise or Apache/NGINX.
 
-PostgreSQL database is already connected and 
+PostgreSQL database is already connected and tested.
 
 
 
