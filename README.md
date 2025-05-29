@@ -18,14 +18,14 @@ A basic but functional user authentication system built using **Django**, integr
 - Virtual environments usage
 - Variables controlled via `DJANGO_PRODUCTION` flag
 - Two requirements files:  
-  - `requirements-dev.txt`  
-  - `requirements-prod.txt`
+  - `desarrollo.txt`  
+  - `produccion.txt`
 
 ---
 
 ## 🧰 Technologies Used
 
-- **Django 4 / 5**
+- **Django 4**
 - **PostgreSQL**
 - **HTML / CSS / JavaScript**
 - **Gunicorn + mod_wsgi** (for production)
