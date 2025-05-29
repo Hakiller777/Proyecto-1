@@ -34,4 +34,54 @@ A basic but functional user authentication system built using **Django**, integr
 - Systemd services (e.g. `pgadmin4.service`)
 
 ---
+## 🔧 Setup Instructions
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+
+2. Create a Virtual Environment
+
+python3 -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate     # Windows
+
+3. Install Dependencies
+
+For development:
+
+pip install -r requirements-dev.txt
+
+For production:
+
+pip install -r requirements-prod.txt
+
+4. Set Environment Variable
+
+In your terminal:
+
+export DJANGO_PRODUCTION=false  # for development
+
+Or in .env file:
+
+DJANGO_PRODUCTION=false
+
+5. Run the App
+
+python manage.py migrate
+python manage.py runserver
+
+Visit http://127.0.0.1:8000 in your browser.
+
+📦 Deployment Notes
+
+Production server can use Gunicorn or mod_wsgi with Apache.
+
+You may use systemctl for services like pgAdmin.
+
+Configure static files with whitenoise or Apache/NGINX.
+
+PostgreSQL database is already connected and 
+
+
 
