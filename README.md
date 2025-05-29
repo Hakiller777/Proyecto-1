@@ -35,10 +35,3 @@ A basic but functional user authentication system built using **Django**, integr
 
 ---
 
-## 🔧 Setup Instructions
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
